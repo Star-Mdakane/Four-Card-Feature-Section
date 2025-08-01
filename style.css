@@ -41,10 +41,10 @@ header {
     text-align: center;
 }
 
-header > h2:nth-of-type(1) {
+.first {
     font-weight: 200;
 }
-header > h2:nth-of-type(2) {
+.sec {
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
@@ -108,4 +108,40 @@ header > h2:nth-of-type(2) {
     font-size: 11px; 
     text-align: center;
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 45rem) {
+    .container {
+        gap: 2rem;
+    }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .header-wrap {
+    grid-column: 2/3;
+  }
+
+
+    /* Wrapper Flex */
+
+  /* .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .wrapper > * {
+   flex: 1 0 325px;
+  } */
+
+  /* Wrapper Grid */
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(325px, 1fr));
+    align-items: center;
+  }
+
 }
