@@ -1,0 +1,34 @@
+:root{
+    --mn-box-bg-color:hsl(0, 0%, 100%);
+    --mn-bg-color:hsl(0, 0%, 98%);
+    --mn-h-color:hsl(234, 12%, 34%);
+    --mn-txt-color:hsl(212, 6%, 44%);
+    --box-1-color:hsl(180, 62%, 55%);
+    --box-2-color:hsl(0, 78%, 62%);
+    --box-3-color:hsl(34, 97%, 64%);
+    --box-4color:hsl(212, 86%, 64%);
+    --Poppins:'Poppins',sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--Poppins);
+    font-size: 0.938rem;background-color: var(--mn-bg-color);
+    width: minmax(23.45rem, 90rem);
+    margin-inline: auto;
+   
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
