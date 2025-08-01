@@ -2,11 +2,11 @@
     --mn-box-bg-color:hsl(0, 0%, 100%);
     --mn-bg-color:hsl(0, 0%, 98%);
     --mn-h-color:hsl(234, 12%, 34%);
-    --mn-txt-color:hsl(212, 6%, 44%);
+    --mn-txt-color:hsl(210, 6%, 44%);
     --box-1-color:hsl(180, 62%, 55%);
     --box-2-color:hsl(0, 78%, 62%);
     --box-3-color:hsl(34, 97%, 64%);
-    --box-4color:hsl(212, 86%, 64%);
+    --box-4-color:hsl(212, 86%, 64%);
     --Poppins:'Poppins',sans-serif;
 }
 
@@ -20,15 +20,92 @@
 
 body {
     font-family: var(--Poppins);
-    font-size: 0.938rem;background-color: var(--mn-bg-color);
-    width: minmax(23.45rem, 90rem);
-    margin-inline: auto;
-   
+    font-size: 0.938rem;
+    position: relative;
+    background-color: var(--mn-bg-color);
+    color: var(--mn-txt-color);
+    padding: 1rem;
 }
+
+.container {
+    margin-inline: auto;
+    padding: 1rem;
+    max-width: 90rem;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+}
+
+header {
+    text-align: center;
+}
+
+header > h2:nth-of-type(1) {
+    font-weight: 200;
+}
+header > h2:nth-of-type(2) {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.box {
+    background-color: var(--mn-box-bg-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    box-shadow: 0 0 15px 5px rgba(105, 112, 119, 0.3);
+}
+
+.box h3 {
+    font-weight: 600;
+    color: var(--mn-h-color);
+}
+
+.box p {
+    font-weight: 200;
+    font-size: 0.938rem;
+    margin-bottom: 1rem;
+}
+
+.img {
+    text-align: end;
+}
+
+.cyan {
+    border-top: 0.25rem solid var(--box-1-color) ;
+}
+.red {
+    border-top: 0.25rem solid var(--box-2-color) ;
+}
+.orange {
+    border-top: 0.25rem solid var(--box-3-color) ;
+}
+.blue {
+    border-top: 0.25rem solid var(--box-4-color) ;
+}
+
 
 .attribution {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 11px; 
+    text-align: center;
+    color: hsl(228, 45%, 44%); 
 }
